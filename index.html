@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drawing-Board-Task</title>
+    <link rel="stylesheet" href="/styles.css">
+    
+  </head>
+  <body>
+    <div class="container">
+         <section class="drawing-board">
+            <canvas width="500" height="500"></canvas>
+         </section>
+         <section class="tool-board">
+         <div class="row colors">
+            <label class="title">Colours:</label>
+            <div class="color-num">
+            <ul class="options">     
+             <li class="option"></li>
+             <li class="option selected"></li>
+             <li class="option"></li>
+             <li class="option"></li>
+             <li class="option"></li>
+             <li class="option"></li>
+             <li class="option"></li>
+            </ul>
+            <!-- <ol class ="nums">
+                <li class="num">1</li>
+                <li class="num"></li>
+                <li class="num"></li>
+                <li class="num"></li>
+                <li class="num"></li>
+                <li class="num"></li>
+                <li class="num"></li>
+            </ol> -->
+            <ul class="options">     
+                <li class="num">1</li>
+                <li class="num">2</li>
+                <li class="num">3</li>
+                <li class="num">4</li>
+                <li class="num">5</li>
+                <li class="num">6</li>
+                <li class="num">7</li>
+               </ul>
+    </div>
+
+      </div>
+      <div class="row">
+        <ul class="options">
+          <li class="option active tool" id="brush">
+            <img src="assets/brush.jpg" alt="" width="20px" height="20px">
+             <span>Brush</span>
+           </li>
+          <li class="option tool" id="square">
+           <img src="assets/R.png" alt="" width="20px" height="20px">
+            <span>Square</span>
+          </li>
+          <li class="option">
+            <input type="checkbox" id="fill-color">
+            <label for="fill-color">Fill color</label>
+
+          </li>
+        </ul>
+      </div>
+      <div class="row buttons">
+         <button class="save">Save</button>
+        <button class="cancelbutton">Cancel</button>
+      </div>
+    </section>
+    </div>
+    <script src="script.js" defer></script>
+  </body>
+</html>

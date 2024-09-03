@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: white;
+    
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+section{
+    background: white;
+    /* border-radius: 7px; */
+}
+.drawing-board{
+    display: flex;
+    border: 1px solid black;
+    width: 500px;
+    height: 500px;
+    /* grid-template-columns: repeat(250, 2px);
+    grid-template-rows: repeat(250, 2px); */
+    margin: 10px ;
+    justify-content: center;
+    align-items: center;
+}
+.drawing-board .canvas{
+    /* width: 500px;
+    height: 500px; */
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.tool-board{
+    width: 180px;
+    /* padding: 5px 15px 0; */
+}
+
+.tool-board .row{
+    margin-bottom: 20px ;
+}
+
+.row .options{
+    list-style: none;
+    margin: 10px 0 0 5px;
+}
+
+.row .options .option{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+.color-num{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 3px;
+    position: relative;
+
+
+    
+}
+.colors .option{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin-top: 3px;
+    position: relative;
+}
+.colors  .option:nth-child(1){
+    background-color: #FF0000;
+
+}
+.colors  .option:nth-child(2){
+    background-color: #000000;
+
+}
+.colors .option:nth-child(3){
+    background-color: #5C59EF;
+
+}
+.colors .option:nth-child(4){
+    background-color: #FBFF2B;
+
+}
+.colors .option:nth-child(5){
+    background-color: #12BD03;
+
+}
+.colors .option:nth-child(6){
+    background-color: #FF00F5;
+
+}
+.colors .option:nth-child(7){
+    background-color: #FF9900;
+
+}
+.colors .option:hover::before{
+    position: absolute;
+    content: "";
+    top:50%;
+    left:50%;
+    height: 12px;
+    width: 12px;
+    background: inherit;
+    border-radius: inherit;
+    border: 2px solid #fff;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+
+
+}
+.colors .num{
+    height: 20px;
+    width: 20px;
+    margin-top: 3px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    position: relative;
+    border: 1px solid black;
+}
+.option:is(:hover, .active) img{
+    filter:invert(17%) sepia(90%) saturate(3000%) hue-rotate(900deg) brightness(100%) contrast(100%)
+
+}
+.option #fill-color{
+    cursor: pointer;
+    height:14px;
+    width:14px;
+
+}
+.option :where(span,label){
+    color: #5A6168;
+    cursor: pointer;
+    padding-left: 10px;
+}
+.option:is(:hover, .active):where(span, label){
+    color: #4A98F7;
+}
+
+.buttons{
+    display:flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 10px;
+}
+.buttons button{
+    width: 100%;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 11px 0;
+    margin-bottom: 13px ;
+    background-color: #969CD3 ;
+    cursor: pointer;
+
+}
+.buttons button:hover{
+    background-color: #7983E0;
+}
